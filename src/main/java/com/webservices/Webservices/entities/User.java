@@ -13,7 +13,7 @@ import jakarta.persistence.Table;
 public class User implements Serializable{
     private static final long serialVersionUID = 1L;    
 
-    @Id
+    @Ids
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
