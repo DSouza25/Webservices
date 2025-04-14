@@ -1,6 +1,10 @@
 package com.webservices.Webservices.entities;
 
 import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Set;
+
+import org.springframework.beans.factory.annotation.Autowired;
 
 import jakarta.persistence.Table;
 import jakarta.persistence.Entity;
@@ -16,6 +20,9 @@ public class Category implements Serializable{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
+
+    @Autowired
+    private Set<Product> products = new HashSet<>();
 
     public Category() {
     }
@@ -39,6 +46,11 @@ public class Category implements Serializable{
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    
+    public Set<Product> getProducts() {
+        return products;
     }
 
     @Override
