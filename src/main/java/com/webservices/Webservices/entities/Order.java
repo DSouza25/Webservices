@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.time.Instant;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.webservices.Webservices.entities.enums.OrderStatus;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -42,7 +43,7 @@ public class Order implements Serializable{
         if(orderStatus != null){
             this.orderStatus = orderStatus.getCode();
         }
-        
+
         this.client = client;
     }
     

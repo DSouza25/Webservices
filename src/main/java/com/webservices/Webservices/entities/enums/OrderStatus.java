@@ -1,4 +1,4 @@
-package com.webservices.Webservices.entities;
+package com.webservices.Webservices.entities.enums;
 
 public enum OrderStatus {
     WATING_PAYMENT(1),
